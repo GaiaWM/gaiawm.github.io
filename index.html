@@ -3,46 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GaiaWM — World Model for Intelligent Agents</title>
+  <title>GaiaWM</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      color: #333;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
+      background: #fafafa;
+      color: #222;
+      line-height: 1.6;
     }
     header {
-      background: #4267B2;
+      background: #3b4a6b;
       color: #fff;
-      padding: 3rem 1rem;
       text-align: center;
+      padding: 3rem 1rem;
     }
     header h1 {
-      margin: 0 0 0.5rem;
+      margin: 0;
       font-size: 2.8rem;
     }
     header p {
+      margin-top: 0.5rem;
       font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
     }
     main {
-      padding: 2rem;
       max-width: 900px;
-      margin: 0 auto;
-      line-height: 1.6;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
     .section {
       margin-bottom: 2rem;
     }
     .section h2 {
+      font-size: 1.6rem;
       border-bottom: 2px solid #ddd;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
     }
     a {
-      color: #4267B2;
+      color: #3b4a6b;
       text-decoration: none;
     }
     a:hover {
@@ -60,43 +59,49 @@
 
 <header>
   <h1>GaiaWM</h1>
-  <p>Exploring hybrid world models for intelligent agents — dynamic, contextual, and extensible.</p>
+  <p>Structured world context for intelligent agents — grounded in spatial knowledge.</p>
 </header>
 
 <main>
 
   <section class="section">
-    <h2>What is GaiaWM?</h2>
+    <h2>About GaiaWM</h2>
     <p>
-      <strong>GaiaWM</strong> is an experimental project aimed at building a next-generation world model for autonomous reasoning agents. It blends spatial context, evolving knowledge, and configurable world data to enable agents to perceive, act, and adapt in rich environments.
+      <strong>GaiaWM</strong> is an experimental project aimed at defining a reusable, extensible world model that *agents can perceive, update, and reason about*. It combines structured spatial context with dynamic interaction logic to support exploration and intelligent decision making.
+    </p>
+    <p>
+      Rather than presenting a visual map alone, GaiaWM focuses on representing the meaning and context of world elements in a way algorithms and reasoning systems can work with directly.
     </p>
   </section>
 
   <section class="section">
-    <h2>Inspired by Open Mapping Initiatives</h2>
+    <h2>Lineage and Context</h2>
     <p>
-      The project relies on data from open mapping efforts like <a href="https://www.openhistorymap" target="_blank">OpenHistoryMap</a>, a crowd-driven historical atlas capturing changes in geography over time, 
-      and creative cartography platforms like <a href="https://www.fantasymaps.org" target="_blank">OpenFantasyMap</a>, which bring fictional worlds to life. :contentReference[oaicite:0]{index=0}
+      GaiaWM draws from and complements your work on spatial and narrative-oriented mapping projects:
     </p>
-    <p>
-      While those maps focus on rendering data about real and imagined worlds, GaiaWM is focused on the *representation of world knowledge in a structured form agents can query, reason with, and interact against* — a different slice of the same spatial imagination.
-    </p>
-  </section>
-
-  <section class="section">
-    <h2>Early Features</h2>
     <ul>
-      <li>Configurable world definitions (objects, terrain, agents).</li>
-      <li>RESTful access to localized environmental context.</li>
-      <li>Designed to support cognitive agent loops with perception and action.</li>
-      <li>Extensible towards both historical, fictional, and hybrid spaces.</li>
+      <li><strong><a href="https://www.openhistorymap.org" target="_blank">OpenHistoryMap</a></strong> — a platform for capturing historic and archaeological spatial information across time.</li>
+      <li><strong><a href="https://www.fantasymaps.org" target="_blank">OpenFantasyMaps</a></strong> — an open framework for exploring and sharing fantasy cartography, reusing and extending mapping infrastructure into imagined worlds. :contentReference[oaicite:0]{index=0}</li>
+    </ul>
+    <p>
+      Where those projects focus on *geographic information and cartographic representation*, GaiaWM focuses on *structured context and actionable world state* — a layer that can serve mapping, simulation, and intelligent agent systems alike.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Current Capabilities</h2>
+    <ul>
+      <li>Configurable environment definitions (objects, terrain, agents).</li>
+      <li>API endpoints for discovering local context (nearby objects, terrain metadata).</li>
+      <li>Designed to support reasoning loops where *perception drives action*.</li>
+      <li>Built to integrate with agent architectures and world models via standards-friendly APIs.</li>
     </ul>
   </section>
-
+  
 </main>
 
 <footer>
-  &copy; 2026 GaiaWM · Crafted with curiosity, released with care.
+  &copy; 2026 GaiaWM — a project combining spatial knowledge and intelligent interaction.
 </footer>
 
 </body>
