@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>GaiaWM</title>
   <style>
-    /* Base colors */
+    /* Core palette */
     :root {
       --dark-gray: #24272a;
       --medium-gray: #3a3f44;
@@ -13,37 +13,28 @@
       --accent-green: #4caf50;
       --white: #ffffff;
     }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
+      margin: 0;
       font-family: 'Inter', Arial, sans-serif;
+      background: var(--light-gray);
       color: var(--dark-gray);
-      background-color: var(--light-gray);
       line-height: 1.6;
     }
-
-    a { color: var(--accent-green); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
     header {
-      position: relative;
       background: var(--dark-gray);
       color: var(--white);
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 3rem 1rem;
     }
     header h1 {
       font-size: 3rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: -1px;
+      margin-bottom: .5rem;
     }
     header p {
       font-size: 1.2rem;
       max-width: 700px;
-      margin: 0 auto;
+      margin: auto;
     }
-
     main {
       max-width: 900px;
       margin: 2rem auto;
@@ -53,13 +44,18 @@
       margin-bottom: 2rem;
     }
     .section h2 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: var(--accent-green);
       border-bottom: 2px solid var(--medium-gray);
-      margin-bottom: 0.8rem;
-      padding-bottom: 0.3rem;
+      padding-bottom: .3rem;
+      margin-bottom: .8rem;
     }
-
+    ul { margin-left: 1.4rem; }
+    a {
+      color: var(--accent-green);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
     .cta {
       text-align: center;
       margin-top: 3rem;
@@ -67,7 +63,7 @@
     .cta a {
       background: var(--accent-green);
       color: var(--white);
-      padding: 0.9rem 1.8rem;
+      padding: .9rem 1.8rem;
       border-radius: 5px;
       font-weight: bold;
       display: inline-block;
@@ -75,10 +71,9 @@
     .cta a:hover {
       background: #43a047;
     }
-
     footer {
       text-align: center;
-      font-size: 0.9rem;
+      font-size: .9rem;
       color: #777;
       margin: 3rem 0 1rem;
     }
@@ -88,46 +83,60 @@
 
 <header>
   <h1>GaiaWM</h1>
-  <p>
-    A fresh take on world model for AI appications <br> where <i>agents reason with what matters, not what’s everywhere</i>.
-    Context that is <i>dynamic, adaptive, and ready for intelligent systems across AI, simulation, and gaming</i>.
-  </p>
+  <p>A new approach to world models — where context, perception, and interaction matter as much as geography.</p>
 </header>
 
 <main>
 
   <section class="section">
-    <h2>Why GaiaWM?</h2>
+    <h2>What GaiaWM Is</h2>
     <p>
-      World models today lean too heavily on exhaustive maps or perfect knowledge — neither of which reflect how agents actually perceive and act. GaiaWM focuses on <b>context</b>, <b>belief</b>, and <b>meaningful interaction</b>, giving systems the <b>ight information at the right time</b>.
+      **GaiaWM** isn’t just a bigger map — it’s a **contextual world model** for intelligent agents.
+      Instead of assuming perfect global knowledge, GaiaWM models *what an agent believes and can act on*, given partial perception, dynamic interpretation, and interaction with others.
     </p>
   </section>
 
   <section class="section">
-    <h2>Data You Already Know</h2>
+    <h2>Key Concepts</h2>
+    <ul>
+      <li><strong>Perception & Belief</strong> — Agents perceive slices of the world and form internal beliefs, not total knowledge.</li>
+      <li><strong>Affordances</strong> — What objects and places *enable* an agent to do, based on interpretation, not fixed categories.</li>
+      <li><strong>Social Interaction</strong> — Agents can communicate, share interpretations, negotiate meaning, and update each other’s beliefs.</li>
+      <li><strong>Contextual Narrative</strong> — World interpretation goes beyond geometry: narrative summaries, threats, opportunities, and implicit meaning.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Eye on Fantasy Worlds</h2>
     <p>
-      GaiaWM builds on a foundation we already created and use for multiple applications:
+      One of GaiaWM’s standout experiences is the <strong>“Eye on Fantasy Worlds”</strong> feature — a narrative lens into the world.
+      When you explore a region on <a href="https://www.openfantasymaps.org" target="_blank">OpenFantasyMaps</a>, GaiaWM can generate a **contextual narration** of that slice of the world:
     </p>
     <ul>
-      <li><strong><a href="https://www.openhistorymap.org" target="_blank">OpenHistoryMap</a></strong> — historical and archaeological spatial reference data.</li>
-      <li><strong><a href="https://www.fantasymaps.org" target="_blank">OpenFantasyMaps</a></strong> — imaginative worlds with real GIS underpinnings.</li>
+      <li>What landmarks or features are present</li>
+      <li>How they relate to each other</li>
+      <li>Potential threats or opportunities for agents</li>
+      <li>Cultural or environmental mood of the locale</li>
     </ul>
     <p>
-      These sources anchor GaiaWM’s world representation without locking it into any single map format or static perspective.
+      This transforms a static map into *meaningful, interpretable place* — perfect for worldbuilding, narrative AI, and immersive systems.
     </p>
   </section>
 
   <section class="section">
-    <h2>What GaiaWM Enables</h2>
+    <h2>Multi-Agent Communication</h2>
     <p>
-      GaiaWM helps systems:
+      GaiaWM now supports **agent-to-agent communication** — so agents don’t just act independently; they can:
     </p>
     <ul>
-      <li>Interpret surroundings in context — not just flat coordinates.</li>
-      <li>Represent uncertainty and evolving beliefs.</li>
-      <li>Respond and adapt without full world visibility.</li>
-      <li>Power smarter simulations, synthetic scenarios, and agent-centric logic.</li>
+      <li>Share context and interpretations</li>
+      <li>Exchange meaningful observations</li>
+      <li>Negotiate plans and coordinate goals</li>
+      <li>Build shared understanding over time</li>
     </ul>
+    <p>
+      This goes beyond traditional social simulacra models by enabling *explicit exchange of semantic information*, not merely inference from observed behavior.
+    </p>
   </section>
 
   <div class="cta">
