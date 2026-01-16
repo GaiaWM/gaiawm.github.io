@@ -75,7 +75,7 @@ const InvestorsSection = () => {
                     className="w-full glow-green group"
                     asChild
                   >
-                    <a href="mailto:contact@gaiawm.dev">
+                    <a href="mailto:marco.montanari@openhistorymap.org">
                       <Mail className="mr-2 h-5 w-5" />
                       Get in Touch
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
