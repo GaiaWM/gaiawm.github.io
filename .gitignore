@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+_cacache
+_logs
+_update-notifier-last-checked
