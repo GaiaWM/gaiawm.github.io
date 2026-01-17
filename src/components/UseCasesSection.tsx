@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Bot, Gamepad2, Boxes, ExternalLink, Map } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import eyeOnWorldSample from "@/assets/eyeonworld-sample.webp";
+import { Bot, Gamepad2, Boxes } from "lucide-react";
 
 const useCases = [
   {
@@ -23,7 +21,7 @@ const useCases = [
   },
 ];
 
-const samplePrompt = `Looking around, you're standing at the edge of a residential neighborhood where the midday sun beats down on the cobblestones. Selduth Street is just a few paces to your right, a narrow lane that winds its way into the heart of the district. A much larger thoroughfare, The High Road, runs parallel to where you are, its wider path visible between the rooftops and bustling with midday traffic. The area is densely packed with homes and workshops, most standing two or three stories high with timber-framed facades. To your left, a cluster of buildings huddle together, their slate roofs showing signs of recent repair. Straight ahead, the street opens into a small square where you can hear the distant clang of a blacksmith's hammer and the low murmur of conversation from a nearby tavern.`;
+
 
 const UseCasesSection = () => {
   const ref = useRef(null);
@@ -72,92 +70,6 @@ const UseCasesSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* EyeOnWorld Showcase */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="max-w-6xl mx-auto"
-        >
-          <div className="glass-card rounded-3xl p-8 md:p-12 border-glow overflow-hidden">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
-                <Map className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-                  GaiaWM EyeOnWorld
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  See the world through narrative perception
-                </p>
-              </div>
-            </div>
-
-            <p className="text-muted-foreground text-lg mb-8 max-w-3xl">
-              EyeOnWorld transforms spatial map data from OpenFantasyMaps into rich, 
-              contextual narrative descriptions — giving agents (and players) a sense of 
-              place, not just coordinates.
-            </p>
-
-            <div className="grid lg:grid-cols-2 gap-8 items-start">
-              {/* Image */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 0.7, duration: 0.5 }}
-                className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl"
-              >
-                <img
-                  src={eyeOnWorldSample}
-                  alt="EyeOnWorld rendered scene - A medieval fantasy street with timber-framed buildings"
-                  className="w-full h-auto"
-                />
-                <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-medium text-primary border border-primary/30">
-                  Generated from map data
-                </div>
-              </motion.div>
-
-              {/* Prompt */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.8, duration: 0.5 }}
-                className="space-y-6"
-              >
-                <div>
-                  <span className="text-primary font-heading font-semibold text-xs uppercase tracking-widest">
-                    Extracted Narrative Prompt
-                  </span>
-                  <div className="mt-3 bg-gaia-darker rounded-xl p-6 border border-primary/10 max-h-[300px] overflow-y-auto">
-                    <p className="text-muted-foreground text-sm leading-relaxed italic">
-                      "{samplePrompt}"
-                    </p>
-                  </div>
-                </div>
-
-                <Button
-                  asChild
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold gap-2"
-                >
-                  <a
-                    href="https://map.fantasymaps.org/toril/1302/16.454892708516/43.604951858138975/-76.7630647653005"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Try EyeOnWorld Live
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                </Button>
-
-                <p className="text-muted-foreground text-xs">
-                  Explore the Forgotten Realms through narrative perception on OpenFantasyMaps
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
