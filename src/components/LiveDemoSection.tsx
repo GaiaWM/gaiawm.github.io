@@ -5,6 +5,7 @@ import { ExternalLink, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import eyeOnWorldSample from "@/assets/eyeonworld-sample.webp";
 import eyeOnWorldLogo from "@/assets/eyeonworld-logo.png";
+import inspectorLogo from "@/assets/inspector-logo.png";
 
 const samplePrompt = `Looking around, you're standing at the edge of a residential neighborhood where the midday sun beats down on the cobblestones. Selduth Street is just a few paces to your right, a narrow lane that winds its way into the heart of the district. A much larger thoroughfare, The High Road, runs parallel to where you are, its wider path visible between the rooftops and bustling with midday traffic. The area is densely packed with homes and workshops, most standing two or three stories high with timber-framed facades. To your left, a cluster of buildings huddle together, their slate roofs showing signs of recent repair. Straight ahead, the street opens into a small square where you can hear the distant clang of a blacksmith's hammer and the low murmur of conversation from a nearby tavern.`;
 
@@ -118,6 +119,50 @@ const LiveDemoSection = () => {
                 </p>
               </motion.div>
             </div>
+          </div>
+        </motion.div>
+
+        {/* Object Inspector Showcase */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="max-w-6xl mx-auto mt-12"
+        >
+          <div className="glass-card rounded-3xl p-8 md:p-12 border-glow overflow-hidden">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-14 h-14 rounded-xl overflow-hidden flex items-center justify-center">
+                <img src={inspectorLogo} alt="Object Inspector logo" className="w-full h-full object-contain" />
+              </div>
+              <div>
+                <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+                  GaiaWM Object Inspector
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Explore object affordances and possibilities
+                </p>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-lg mb-8 max-w-3xl">
+              Analyze what you can do with any object by exploring its affordances. 
+              The Object Inspector reveals the potential interactions and possibilities 
+              that objects offer within a world context.
+            </p>
+
+            <Button
+              asChild
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold gap-2"
+            >
+              <a
+                href="https://gaiawm.github.io/inspector"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Try Object Inspector
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </Button>
           </div>
         </motion.div>
 
